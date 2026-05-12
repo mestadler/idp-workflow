@@ -18,31 +18,31 @@ Define the release interface and mandatory gates so build/sign/publish behavior 
 
 ## Implementation Work Items
 
-- [ ] Define release inputs (source ref, version, target registry paths, keys).
-- [ ] Define release outputs (signed image, SBOM, signed deploy artifact, digest-pinned overlay change).
-- [ ] Define canonical operation order: build -> push -> SBOM -> sign -> digest pin -> publish deploy artifact -> sign deploy artifact.
-- [ ] Define gate criteria and fail-fast behavior for each step.
-- [ ] Define traceability requirements linking version, digest, signatures, and deploy artifact revision.
+- [x] Define release inputs (source ref, version, target registry paths, keys).
+- [x] Define release outputs (signed image, SBOM, signed deploy artifact, digest-pinned overlay change).
+- [x] Define canonical operation order: build -> push -> SBOM -> sign -> digest pin -> publish deploy artifact -> sign deploy artifact.
+- [x] Define gate criteria and fail-fast behavior for each step.
+- [x] Define traceability requirements linking version, digest, signatures, and deploy artifact revision.
 
 ## Mandatory Test Requirements
 
-- [ ] Contract order is explicit and unambiguous.
-- [ ] Every release step has pass/fail criteria.
-- [ ] Traceability requirements are testable from command outputs.
+- [x] Contract order is explicit and unambiguous.
+- [x] Every release step has pass/fail criteria.
+- [x] Traceability requirements are testable from command outputs.
 
 ## Test Evidence Log
 
 | ID | Test | Command(s) | Expected | Actual | Result |
 |---|---|---|---|---|---|
-| T01 | Release order completeness | `rg -n "build|push|sbom|sign|digest|flux push artifact" developer-workflow.md` | Canonical order present and consistent | _TBD_ | ⬜ |
-| T02 | Gate definition review | _Manual contract review_ | Step-level pass/fail and stop conditions documented | _TBD_ | ⬜ |
-| T03 | Traceability mapping review | _Manual review + sample mapping_ | Version/digest/signature/deploy artifact link is explicit | _TBD_ | ⬜ |
+| T01 | Release order completeness | `rg -n "build|push|sbom|sign|digest|flux push artifact" developer-workflow.md` | Canonical order present and consistent | Ordered build-sign-publish flow and gating anchors are present in workflow release section. | PASS |
+| T02 | Gate definition review | _Manual contract review (`docs/release-contract.md`)_ | Step-level pass/fail and stop conditions documented | "Step Gates and Fail-Fast Rules" defines pass/fail behavior for each release step. | PASS |
+| T03 | Traceability mapping review | _Manual review + sample mapping_ | Version/digest/signature/deploy artifact link is explicit | "Traceability Requirements" lists required mapping fields linking source/version/digests/signatures/artifacts. | PASS |
 
 ## Exit Criteria (Review-Ready)
 
-- [ ] All implementation work items completed.
-- [ ] All mandatory tests marked pass with evidence in the log.
-- [ ] No out-of-scope behavior included.
+- [x] All implementation work items completed.
+- [x] All mandatory tests marked pass with evidence in the log.
+- [x] No out-of-scope behavior included.
 - [ ] DG-3 decision recorded and approved.
 
 ## Decision Gate (DG-3)
@@ -58,3 +58,11 @@ Define the release interface and mandatory gates so build/sign/publish behavior 
 
 - M4 implementation must follow this contract without reordering steps.
 - Contract changes after DG-3 require re-validation of M4 and M5.
+
+## DG-3 Decision Record
+
+- Status: Pending PR approval sign-off
+- Decision: M3 release contract is execution-ready for M4, pending reviewer approval.
+- Evidence: T01/T02/T03 all PASS in this checklist.
+- Approval method: PR review approval (per `docs/TRACKING-STANDARD.md`).
+- PR link: _TBD_
