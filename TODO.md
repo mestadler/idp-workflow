@@ -7,7 +7,8 @@ Single-page status index for phased delivery of the k0s-based, OCI-first, Flux-d
 ## Status
 
 Planning baseline is complete.
-PR0 / M0 is in progress (architecture contract lock).
+PR0 / M0 is complete (DG-0 approved).
+Execution moves to PR1 / M1 (k0s baseline).
 
 ## Architecture / Delivery Context
 
@@ -21,12 +22,13 @@ PR0 / M0 is in progress (architecture contract lock).
 - [x] Established and refined `developer-workflow.md` as canonical workflow.
 - [x] Added repository guidance in `AGENTS.md`.
 - [x] Added tracking standard and templates in `docs/`.
+- [x] PR0 — Architecture Contract Locked (M0 / DG-0).
 
 ## In flight
 
-- [ ] **PR0 — Architecture contract lock (M0 / DG-0)**
-      Freeze v1 scope, defaults, non-goals, and decision gates.
-      Detailed execution tracker: `docs/pr0-architecture-contract-checklist.md`.
+- [ ] **PR1 — k0s Baseline Ready (M1 / DG-1)**
+      Define reproducible single-node k0s baseline and readiness checks.
+      Detailed execution tracker: `docs/pr1-k0s-baseline-checklist.md`.
 
 ## Implementation pipeline (next)
 
