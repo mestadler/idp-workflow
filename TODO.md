@@ -9,7 +9,8 @@ Single-page status index for phased delivery of the k0s-based, OCI-first, Flux-d
 Planning baseline is complete.
 PR0 / M0 is complete (DG-0 approved).
 PR1 / M1 is complete (DG-1 approved).
-Execution moves to PR2 / M2 (toolchain + supply chain baseline).
+PR2 / M2 is complete (DG-2 approved).
+Execution moves to PR3 / M3 (deterministic release contract).
 
 ## Architecture / Delivery Context
 
@@ -25,12 +26,13 @@ Execution moves to PR2 / M2 (toolchain + supply chain baseline).
 - [x] Added tracking standard and templates in `docs/`.
 - [x] PR0 — Architecture Contract Locked (M0 / DG-0).
 - [x] PR1 — k0s Baseline Ready (M1 / DG-1).
+- [x] PR2 — Toolchain + Supply Chain Baseline (M2 / DG-2).
 
 ## In flight
 
-- [ ] **PR2 — Toolchain + Supply Chain Baseline (M2 / DG-2)**
-      Standardize k8s tooling source, registry conventions, and SOPS-backed cosign key model.
-      Detailed execution tracker: `docs/pr2-toolchain-supply-chain-checklist.md`.
+- [ ] **PR3 — Deterministic Release Contract (M3 / DG-3)**
+      Lock build/sign/publish contract and mandatory failure gates.
+      Detailed execution tracker: `docs/pr3-release-contract-checklist.md`.
 
 ## Implementation pipeline (next)
 
@@ -44,7 +46,7 @@ Each phase lands as its own PR.
       Define reproducible single-node k0s baseline and readiness checks.
       Detailed execution tracker: `docs/pr1-k0s-baseline-checklist.md`.
 
-- [ ] **PR2 — Toolchain + Supply Chain Baseline (M2 / DG-2)**
+- [x] **PR2 — Toolchain + Supply Chain Baseline (M2 / DG-2)**
       Standardize k8s tooling source, registry conventions, and SOPS-backed cosign key model.
       Detailed execution tracker: `docs/pr2-toolchain-supply-chain-checklist.md`.
 

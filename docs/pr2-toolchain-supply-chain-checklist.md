@@ -44,7 +44,7 @@ Standardize tool installation, artifact conventions, and trust/key handling for 
 - [x] All implementation work items completed.
 - [x] All mandatory tests marked pass with evidence in the log.
 - [x] No out-of-scope behavior included.
-- [ ] DG-2 decision recorded and approved.
+- [x] DG-2 decision recorded and approved.
 
 ## Decision Gate (DG-2)
 
@@ -62,8 +62,8 @@ Standardize tool installation, artifact conventions, and trust/key handling for 
 
 ## DG-2 Decision Record
 
-- Status: Pending PR approval sign-off
-- Decision: M2 toolchain and trust baseline is execution-ready for M3, pending reviewer approval.
+- Status: Approved via PR sign-off
+- Decision: M2 toolchain and trust baseline is execution-ready for M3.
 - Evidence: T01/T02/T03 all PASS in this checklist.
 - Approval method: PR review approval (per `docs/TRACKING-STANDARD.md`).
-- PR link: _TBD_
+- PR link: `https://github.com/mestadler/idp-workflow/pull/3`
