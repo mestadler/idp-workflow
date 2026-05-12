@@ -42,7 +42,7 @@ Define a reproducible single-node k0s baseline suitable for the reference archit
 - [x] All implementation work items completed.
 - [x] All mandatory tests marked pass with evidence in the log.
 - [x] No out-of-scope behavior included.
-- [ ] DG-1 decision recorded and approved.
+- [x] DG-1 decision recorded and approved.
 
 ## Decision Gate (DG-1)
 
@@ -60,8 +60,8 @@ Define a reproducible single-node k0s baseline suitable for the reference archit
 
 ## DG-1 Decision Record
 
-- Status: Pending PR approval sign-off
-- Decision: M1 baseline is execution-ready for M2, pending reviewer approval.
+- Status: Approved via PR sign-off
+- Decision: M1 baseline is execution-ready for M2.
 - Evidence: T01/T02/T03 all PASS in this checklist.
 - Approval method: PR review approval (per `docs/TRACKING-STANDARD.md`).
-- PR link: _TBD_
+- PR link: `https://github.com/mestadler/idp-workflow/pull/2`
