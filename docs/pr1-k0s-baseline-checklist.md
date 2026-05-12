@@ -18,30 +18,30 @@ Define a reproducible single-node k0s baseline suitable for the reference archit
 
 ## Implementation Work Items
 
-- [ ] Define baseline bootstrap sequence for single-node k0s.
-- [ ] Define readiness checks (API health, scheduling, storage baseline, registry reachability assumptions).
-- [ ] Define stable release tracking and upgrade validation posture.
-- [ ] Define baseline evidence format for reproducibility.
+- [x] Define baseline bootstrap sequence for single-node k0s.
+- [x] Define readiness checks (API health, scheduling, storage baseline, registry reachability assumptions).
+- [x] Define stable release tracking and upgrade validation posture.
+- [x] Define baseline evidence format for reproducibility.
 
 ## Mandatory Test Requirements
 
-- [ ] Baseline procedure is replayable from a clean host profile.
-- [ ] Readiness checks produce deterministic pass/fail outcomes.
-- [ ] Upgrade posture is explicit and actionable.
+- [x] Baseline procedure is replayable from a clean host profile.
+- [x] Readiness checks produce deterministic pass/fail outcomes.
+- [x] Upgrade posture is explicit and actionable.
 
 ## Test Evidence Log
 
 | ID | Test | Command(s) | Expected | Actual | Result |
 |---|---|---|---|---|---|
-| T01 | Baseline procedure completeness | _Runbook review_ | All required bootstrap steps defined in order | _TBD_ | ⬜ |
-| T02 | Readiness check coverage | `rg -n "readiness|health|scheduling|storage|registry" <baseline-doc>` | Required readiness dimensions present | _TBD_ | ⬜ |
-| T03 | Stable-track policy clarity | `rg -n "stable|upgrade" <baseline-doc>` | Upgrade policy and validation cadence documented | _TBD_ | ⬜ |
+| T01 | Baseline procedure completeness | _Runbook review (`docs/k0s-single-node-baseline.md`)_ | All required bootstrap steps defined in order | Ordered bootstrap sequence documented in "Baseline Bootstrap Sequence" with executable commands. | PASS |
+| T02 | Readiness check coverage | `rg -n "readiness|health|scheduling|storage|registry" docs/k0s-single-node-baseline.md` | Required readiness dimensions present | Matches found for all required dimensions, including checks and expected outcomes. | PASS |
+| T03 | Stable-track policy clarity | `rg -n "stable|upgrade" docs/k0s-single-node-baseline.md` | Upgrade policy and validation cadence documented | Stable-track policy and upgrade flow are documented with post-upgrade verification commands. | PASS |
 
 ## Exit Criteria (Review-Ready)
 
-- [ ] All implementation work items completed.
-- [ ] All mandatory tests marked pass with evidence in the log.
-- [ ] No out-of-scope behavior included.
+- [x] All implementation work items completed.
+- [x] All mandatory tests marked pass with evidence in the log.
+- [x] No out-of-scope behavior included.
 - [ ] DG-1 decision recorded and approved.
 
 ## Decision Gate (DG-1)
@@ -57,3 +57,11 @@ Define a reproducible single-node k0s baseline suitable for the reference archit
 
 - M2 assumes this baseline and must not redefine platform scope.
 - If baseline assumptions change, reopen DG-1 before continuing.
+
+## DG-1 Decision Record
+
+- Status: Pending PR approval sign-off
+- Decision: M1 baseline is execution-ready for M2, pending reviewer approval.
+- Evidence: T01/T02/T03 all PASS in this checklist.
+- Approval method: PR review approval (per `docs/TRACKING-STANDARD.md`).
+- PR link: _TBD_
