@@ -44,7 +44,7 @@ Freeze the v1 architecture contract so implementation can proceed without scope 
 - [x] All implementation work items completed.
 - [x] All mandatory tests marked pass with evidence in the log.
 - [x] No out-of-scope behavior included.
-- [ ] DG-0 decision recorded and approved.
+- [x] DG-0 decision recorded and approved.
 
 ## Decision Gate (DG-0)
 
@@ -63,7 +63,10 @@ Freeze the v1 architecture contract so implementation can proceed without scope 
 ## DG-0 Decision Record
 
 - Status: Pending PR approval sign-off
-- Decision: PR0 scope is execution-ready for M1, pending reviewer approval.
+- Status: Approved via PR sign-off
+- Decision: PR0 scope is execution-ready for M1.
 - Evidence: T01/T02/T03 all PASS in this checklist.
 - Approval method: PR review approval (per `docs/TRACKING-STANDARD.md`).
-- PR link: _TBD_
+- PR link: `https://github.com/mestadler/idp-workflow/pull/1`
+
+Reviewer action: complete (PR approval recorded).
