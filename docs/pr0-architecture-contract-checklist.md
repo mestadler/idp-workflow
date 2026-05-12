@@ -67,3 +67,5 @@ Freeze the v1 architecture contract so implementation can proceed without scope 
 - Evidence: T01/T02/T03 all PASS in this checklist.
 - Approval method: PR review approval (per `docs/TRACKING-STANDARD.md`).
 - PR link: _TBD_
+
+Reviewer action: approve this PR to satisfy DG-0 sign-off, then update `PR link` and mark the DG-0 exit checkbox complete.
